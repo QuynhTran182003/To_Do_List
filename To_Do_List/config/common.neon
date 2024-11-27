@@ -9,9 +9,12 @@ application:
 
 
 database:
-	dsn: 'mysql:host=localhost;dbname=todolist'
-	user: root
-	password: root
+    default:
+        dsn: 'mysql:host=localhost;dbname=todolist'
+        user: root
+        password: root
+
+
 
 
 latte:

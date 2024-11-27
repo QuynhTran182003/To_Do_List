@@ -16,8 +16,8 @@ final class HomePresenter extends Nette\Application\UI\Presenter
     public function renderDefault(): void
     {
         $this->template->task = $this->database
-            ->table('task')
-            ->where('status_task', 0);
+            ->table('task');
+//            ->where('status_task', 0);
     }
 
     //  MODAL FOR NEW TASK ADDITION
@@ -54,11 +54,24 @@ final class HomePresenter extends Nette\Application\UI\Presenter
     // HANDLE THE CHECK BUTTON
     public function handleMarkAsDone(int $taskId, bool $done): void
     {
-        sleep(5);
         $this->database->table('task')
             ->where('id', $taskId)
             ->update(['status_task' => $done]);
 
         $this->redrawControl('taskList');
     }
+
+    public function handleDeleteTask(int $taskId): void
+    {
+        sleep(5);
+        // Delete the task from the database
+        $this->database->table('task')
+            ->where('id', $taskId)
+            ->delete();
+
+        // Redraw the task list snippet to reflect the change in the UI
+        $this->redrawControl('taskList');
+    }
+
+
 }

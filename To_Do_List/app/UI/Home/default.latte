@@ -6,16 +6,19 @@
 			{*	render tasks*}
 			<div n:foreach="$task as $t" class="task px-4 py-2 mx-5">
 				<div class="d-flex align-items-center justify-content-between">
-					<h4 class="taskTitle" id="taskTitle{$t->id}">{$t->title}</h4>
-					<div class="form-check" >
-						<a n:href="markAsDone! $t->id, !$t->status_task">
-							<btn class="btn checkBtn border border-2" id="checkBtn{$t->id}" style="width: 20px; height: 20px"></btn>
+					<h4 class="taskTitle {if $t->status_task == 1}text-decoration-line-through text-secondary{/if}" id="taskTitle{$t->id}">{$t->title}</h4>
+					<div class="form-check d-flex align-items-center " >
+						<a n:href="markAsDone! $t->id, !$t->status_task" class="px-2">
+							<btn class="checkBtn btn border border-2 {if $t->status_task == 1}bg-success disabled{/if}" id="checkBtn{$t->id}" style="width: 20px; height: 20px"></btn>
+						</a>
+						<a n:href="deleteTask! $t->id">
+							<img src = "/media/XMark.svg" alt="XMark Icon" style="width: 32px; height: 32px;" />
 						</a>
 					</div>
 				</div>
 
-				<h6 class="taskDescription" id="taskDescription{$t->id}">{$t->description}</h6>
-				<div class="taskDeadline" id="taskDeadline{$t->id}">{$t->deadline}</div>
+				<h6 class="taskDescription {if $t->status_task == 1}text-decoration-line-through text-secondary{/if}" id="taskDescription{$t->id}">{$t->description}</h6>
+				<div class="taskDeadline {if $t->status_task == 1}text-decoration-line-through text-secondary{/if}" id="taskDeadline{$t->id}">{$t->deadline}</div>
 				<div class="bg-secondary my-2" style="height: 1px"></div>
 			</div>
 		</div>

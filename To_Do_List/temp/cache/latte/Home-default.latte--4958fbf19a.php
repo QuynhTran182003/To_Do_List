@@ -75,7 +75,7 @@ final class Template_4958fbf19a extends Latte\Runtime\Template
 ';
 		$ʟ_tmp = $this->global->uiControl->getComponent('taskForm');
 		if ($ʟ_tmp instanceof Nette\Application\UI\Renderable) $ʟ_tmp->redrawControl(null, false);
-		$ʟ_tmp->render() /* line 40 */;
+		$ʟ_tmp->render() /* line 43 */;
 
 		echo '						</div>
 						<div class="modal-footer">
@@ -108,31 +108,52 @@ final class Template_4958fbf19a extends Latte\Runtime\Template
 			foreach ($task as $t) /* line 7 */ {
 				echo '			<div class="task px-4 py-2 mx-5">
 				<div class="d-flex align-items-center justify-content-between">
-					<h4 class="taskTitle" id="taskTitle';
+					<h4 class="taskTitle ';
+				if ($t->status_task == 1) /* line 9 */ {
+					echo 'text-decoration-line-through text-secondary';
+				}
+				echo '" id="taskTitle';
 				echo LR\Filters::escapeHtmlAttr($t->id) /* line 9 */;
 				echo '">';
 				echo LR\Filters::escapeHtmlText($t->title) /* line 9 */;
 				echo '</h4>
-					<div class="form-check" >
+					<div class="form-check d-flex align-items-center " >
 						<a href="';
 				echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('markAsDone!', [$t->id, !$t->status_task])) /* line 11 */;
-				echo '">
-							<btn class="btn checkBtn border border-2" id="checkBtn';
+				echo '" class="px-2">
+							<btn class="checkBtn btn border border-2 ';
+				if ($t->status_task == 1) /* line 12 */ {
+					echo 'bg-success disabled';
+				}
+				echo '" id="checkBtn';
 				echo LR\Filters::escapeHtmlAttr($t->id) /* line 12 */;
 				echo '" style="width: 20px; height: 20px"></btn>
+						</a>
+						<a href="';
+				echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('deleteTask!', [$t->id])) /* line 14 */;
+				echo '">
+							<img src="/media/XMark.svg" alt="XMark Icon" style="width: 32px; height: 32px;" />
 						</a>
 					</div>
 				</div>
 
-				<h6 class="taskDescription" id="taskDescription';
-				echo LR\Filters::escapeHtmlAttr($t->id) /* line 17 */;
+				<h6 class="taskDescription ';
+				if ($t->status_task == 1) /* line 20 */ {
+					echo 'text-decoration-line-through text-secondary';
+				}
+				echo '" id="taskDescription';
+				echo LR\Filters::escapeHtmlAttr($t->id) /* line 20 */;
 				echo '">';
-				echo LR\Filters::escapeHtmlText($t->description) /* line 17 */;
+				echo LR\Filters::escapeHtmlText($t->description) /* line 20 */;
 				echo '</h6>
-				<div class="taskDeadline" id="taskDeadline';
-				echo LR\Filters::escapeHtmlAttr($t->id) /* line 18 */;
+				<div class="taskDeadline ';
+				if ($t->status_task == 1) /* line 21 */ {
+					echo 'text-decoration-line-through text-secondary';
+				}
+				echo '" id="taskDeadline';
+				echo LR\Filters::escapeHtmlAttr($t->id) /* line 21 */;
 				echo '">';
-				echo LR\Filters::escapeHtmlText($t->deadline) /* line 18 */;
+				echo LR\Filters::escapeHtmlText($t->deadline) /* line 21 */;
 				echo '</div>
 				<div class="bg-secondary my-2" style="height: 1px"></div>
 			</div>
