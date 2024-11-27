@@ -29,7 +29,7 @@ CREATE TABLE `task` (
   `deadline` datetime DEFAULT NULL,
   `status_task` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `task` (
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
-INSERT INTO `task` VALUES (1,'Complete UI/UX advanced course','Section 17-18','2024-11-30 14:00:00',0),(2,'Get used to webflow','tutorial youtube','2024-12-01 10:00:00',0),(3,'complete this todo app :)) ','use Nette, Bootstrap','2024-12-01 10:00:00',0),(4,'test','testing new task','2024-11-26 00:52:00',1),(5,'test','testing new task','2024-11-26 00:52:00',1),(6,'test','testing new task','2024-11-26 00:52:00',1),(7,'test','testing new task','2024-11-26 00:52:00',1),(8,'bala bum','bumbum','2024-11-26 00:57:00',1),(9,'bala bum','bumbum','2024-11-26 00:57:00',1),(10,'test','test deletion','2024-11-27 22:48:00',1);
+INSERT INTO `task` VALUES (1,'Complete UI/UX advanced course','Section 17-18','2024-11-30 14:00:00',0),(2,'Get used to webflow','tutorial youtube','2024-12-01 10:00:00',0),(3,'complete this todo app :)) ','use Nette, Bootstrap','2024-12-01 10:00:00',1);
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-26 23:03:18
+-- Dump completed on 2024-11-27 15:42:35
