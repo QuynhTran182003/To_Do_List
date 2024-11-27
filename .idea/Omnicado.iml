@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/latte/latte" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/application" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/caching" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/component-model" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/database" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/forms" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tracy/tracy" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/latte/latte" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/application" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/caching" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/component-model" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/database" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/di" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/forms" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/http" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/mail" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/neon" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/php-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/robot-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/security" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/tester" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/symfony/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/symfony/thanks" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/tracy/tracy" />
+      <excludeFolder url="file://$MODULE_DIR$/To_Do_List/vendor/vlucas/phpdotenv" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
