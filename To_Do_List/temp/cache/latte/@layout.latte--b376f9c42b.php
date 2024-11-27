@@ -37,48 +37,48 @@ final class Template_b376f9c42b extends Latte\Runtime\Template
 			}) /* line 7 */;
 			echo ' | ';
 		}
-		echo 'Nette Web</title>
+		echo 'To-Do List</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<style>
+		.rounded-60{
+			border-radius: 60px;
+		}
+		.background{
+			background-image: url(\'/media/background.jpg\');
+			background-size: cover;
+			background-position: center;
+		}
+		.bg-black{
+			background-color: rgba(0,0,0,0.5);
+		}
+
+	</style>
 </head>
 
-<body>
-';
-		foreach ($flashes as $flash) /* line 11 */ {
-			echo '	<div';
-			echo ($ʟ_tmp = array_filter(['flash', $flash->type])) ? ' class="' . LR\Filters::escapeHtmlAttr(implode(" ", array_unique($ʟ_tmp))) . '"' : "" /* line 11 */;
-			echo '>';
-			echo LR\Filters::escapeHtmlText($flash->message) /* line 11 */;
-			echo '</div>
-';
+<body class="background">
 
-		}
-
-		echo "\n";
-		$this->renderBlock('content', [], 'html') /* line 13 */;
-		echo "\n";
-		$this->renderBlock('scripts', get_defined_vars()) /* line 15 */;
+';
+		$this->renderBlock('content', [], 'html') /* line 27 */;
+		echo '		<!-- Scripts -->
+';
+		$this->renderBlock('scripts', get_defined_vars()) /* line 29 */;
 		echo '</body>
+
 </html>
+
 ';
 	}
 
 
-	public function prepare(): array
-	{
-		extract($this->params);
-
-		if (!$this->getReferringTemplate() || $this->getReferenceType() === 'extends') {
-			foreach (array_intersect_key(['flash' => '11'], $this->params) as $ʟ_v => $ʟ_l) {
-				trigger_error("Variable \$$ʟ_v overwritten in foreach on line $ʟ_l");
-			}
-		}
-		return get_defined_vars();
-	}
-
-
-	/** {block scripts} on line 15 */
+	/** {block scripts} on line 29 */
 	public function blockScripts(array $ʟ_args): void
 	{
-		echo '	<script src="https://unpkg.com/nette-forms@3"></script>
+		echo '		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<!-- own script -->
+		<script src="Scripts/scriptHome.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 ';
 	}
 }

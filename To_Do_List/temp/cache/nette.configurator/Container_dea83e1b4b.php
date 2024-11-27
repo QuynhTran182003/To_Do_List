@@ -97,7 +97,7 @@ class Container_dea83e1b4b extends Nette\DI\Container
 
 	public function createServiceApplication__1(): App\UI\Home\HomePresenter
 	{
-		$service = new App\UI\Home\HomePresenter;
+		$service = new App\UI\Home\HomePresenter($this->getService('database.default.explorer'));
 		$service->injectPrimary(
 			$this->getService('http.request'),
 			$this->getService('http.response'),
@@ -213,7 +213,12 @@ class Container_dea83e1b4b extends Nette\DI\Container
 
 	public function createServiceDatabase__default__connection(): Nette\Database\Connection
 	{
-		$service = new Nette\Database\Connection('sqlite::memory:', null, null, []);
+		$service = new Nette\Database\Connection(
+			'mysql:host=localhost;dbname=todolist',
+			/*sensitive{*/'root'/*}*/,
+			/*sensitive{*/'root'/*}*/,
+			[],
+		);
 		Nette\Bridges\DatabaseTracy\ConnectionPanel::initialize(
 			$service,
 			true,
